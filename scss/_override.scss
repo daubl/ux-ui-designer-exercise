@@ -1,0 +1,16 @@
+// Overrides
+//-------------
+
+// It seems we can't customise nav link background in this version of bootstrap
+$nav-link-background: $gray-200;
+$nav-link-disabled-background: $gray-600;
+
+.nav-tabs .nav-link {
+    background-color: $nav-link-background;
+
+    &.disabled,
+    &:disabled {
+      background-color: $nav-link-disabled-background;
+    }
+}
+

@@ -1,0 +1,36 @@
+// Custom
+// ------
+
+$spacer: 20px;
+
+$gray-900: #212529;
+$purple-700: #432874;
+$border-color: #dee2e6;
+
+// LAYOUT
+$container-max-widths: (
+  md: 600px,
+);
+
+$grid-gutter-width: 0;
+
+// COMPONENTS
+$card-cap-bg: $gray-900;
+$card-spacer-x: 0;
+$card-spacer-y: 0;
+$card-cap-padding-x: 10px;
+$card-cap-padding-y: 10px;
+$card-border-radius: 0;
+$card-inner-border-radius: 0;
+
+$nav-tabs-border-radius: 0;
+$nav-link-padding-x: $spacer;
+$nav-link-color: $purple-700;
+$nav-link-disabled-color: white;
+
+$list-group-color: $purple-700;
+$list-group-active-color: $list-group-color;
+$list-group-active-bg: transparent;
+$list-group-active-border-color: $border-color;
+$list-group-item-padding-y: $spacer;
+
