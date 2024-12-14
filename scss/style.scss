@@ -3,7 +3,8 @@
 @import "bootstrap/scss/functions";
 
 // Custom
-@import "custom.scss";
+@import "custom";
+@import "./own-style/custom-own-style";
 
 // Required Bootstrap imports
 @import "bootstrap/scss/variables";
@@ -36,4 +37,5 @@
 @import "bootstrap/scss/utilities/api";
 
 // Override
-@import "override.scss";
+@import "override";
+@import "./own-style/override-own-style";

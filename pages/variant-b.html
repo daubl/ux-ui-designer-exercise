@@ -4,66 +4,81 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="/css/style.css">
-    <title>UI/UX Designer Exercise</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <title>UI/UX Designer Exercise - Variant B</title>
   </head>
   <body>
     <!-- PAGE NAV -->
     <div class="container-fluid">
-        <header class="d-flex flex-wrap justify-content-center py-2 mb-4 border-bottom">
-          <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-            <span class="fs-4">UI/UX Designer Exercise</span>
-          </a>
-    
+        <header class="d-flex flex-wrap justify-content-center p-2 mb-4 border-bottom">
+          <span class="fs-4 fs-4 me-md-auto">UI/UX Designer Exercise</span>
+
+          <!-- LINKS -->
           <ul class="nav nav-pills">
             <li class="nav-item"><a href="../index.html" class="nav-link">Variant 1</a></li>
-            <li class="nav-item"><a href="/pages/variant-b.html" class="nav-link active" aria-current="page">Variant 2</a></li>
+            <li class="nav-item ms-2"><a href="/pages/variant-b.html" class="nav-link active" aria-current="page">Variant 2</a></li>
           </ul>
         </header>
     </div>
+
+    <!-- PAGE CONTENT -->
     <div class="container">
-BBB
-      <div class="card mt-5">
+
+      <div class="card card-own-style mt-5 p-4 pb-2 rounded-4 shadow border-0">
         <!-- CARD HEADER -->
-        <div class="card-header">
-          <ul class="nav nav-tabs card-header-tabs" role="tablist">
+        <div class="card-header bg-transparent border-0 p-0">
+          <ul class="nav nav-pills border-0" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1-tab-pane" type="button" role="tab" aria-controls="tab1-tab-pane" aria-selected="true">Tab 1</button>
             </li>
             <li class="nav-item ms-1" role="presentation">
-              <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2-tab-pane" type="button" role="tab" aria-controls="tab2-tab-pane" aria-selected="false">Tab 2</button>
+              <button class="nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2-tab-pane" type="button" role="tab" aria-controls="tab2-tab-pane" aria-selected="false">
+                Tab 2
+                <div class="spinner-border spinner-border-sm ms-1 text-primary" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </button>
             </li>
             <li class="nav-item ms-1" role="presentation">
               <button class="nav-link" id="tab3-tab" data-bs-toggle="tab" data-bs-target="#tab3-tab-pane" type="button" role="tab" aria-controls="tab3-tab-pane" aria-selected="false">Tab 3</button>
             </li>
-            <li class="nav-item ms-1" role="presentation">
+            <li class="nav-item ms-1" role="presentation" data-bs-toggle="tooltip" data-bs-title="Default tooltip">
               <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
             </li>
           </ul>
         </div>
 
         <!-- CARD BODY -->
-        <div class="card-body">
-          <div class="tab-content" id="myTabContent">
-
+        <div class="card-body pt-3 tab-content">
             <!-- Content tab 1 -->
             <div class="tab-pane fade show active" id="tab1-tab-pane" role="tabpanel" aria-labelledby="tab1-tab" tabindex="0">
-              <h5 class="card-title fw-bold mt-3 ms-3">Card title</h5>
-              <h6 class="card-subtitle fw-bold mb-4 ms-3">Card subtitle</h6>
+              <h5 class="card-title fw-bold">Card title</h5>
+              <h6 class="card-subtitle mb-3">Card subtitle</h6>
 
-              <div class="row border-top">
-                <div class="col-md-6">
-                  <ul class="list-group list-group-flush" role="tablist">
-                    <li class="list-group-item" role="presentation" id="item-1-tab" data-bs-toggle="tab" data-bs-target="#item-1-tab-pane" role="tab" aria-controls="item-1-tab-pane" aria-selected="true">An item</li>
-                    <li class="list-group-item" role="presentation" id="item-2-tab" data-bs-toggle="tab" data-bs-target="#item-2-tab-pane" role="tab" aria-controls="item-2-tab-pane" aria-selected="false">A second item</li>
-                    <li class="list-group-item" role="presentation"  id="item-3-tab" data-bs-toggle="tab" data-bs-target="#item-3-tab-pane" role="tab" aria-controls="item-3-tab-pane" aria-selected="false">A third item</li>
+              <div class="row">
+                <div class="col-md-6 pe-3">
+                  <ul class="list-group list-group-flush" id="item-tabs" role="tablist">
+                    <li class="list-group-item active" role="presentation" id="item-1-tab" data-bs-toggle="tab" data-bs-target="#item-1-tab-pane" role="tab" aria-controls="item-1-tab-pane" aria-selected="true"><i class="bi-image me-2"></i>An item</li>
+                    <li class="list-group-item" role="presentation" id="item-2-tab" data-bs-toggle="tab" data-bs-target="#item-2-tab-pane" role="tab" aria-controls="item-2-tab-pane" aria-selected="false"><i class="bi-image me-2"></i>A second item</li>
+                    <li class="list-group-item" role="presentation"  id="item-3-tab" data-bs-toggle="tab" data-bs-target="#item-3-tab-pane" role="tab" aria-controls="item-3-tab-pane" aria-selected="false"><i class="bi-image me-2"></i>A third item</li>
                   </ul>
                 </div>
                 <div class="col-md-6 tab-content">
-                  <img src="https://placehold.co/900x600/blue/white?text=Pic-1" width="600" height="400" alt="Placehold" class="img-fluid tab-pane active" id="item-1-tab-pane" role="tabpanel" aria-labelledby="item-1-tab" tabindex="0">
-                  <img src="https://placehold.co/900x600/yellow/black?text=Pic-2" width="600" height="400" alt="Placehold" class="img-fluid tab-pane" id="item-2-tab-pane" role="tabpanel" aria-labelledby="item-2-tab" tabindex="0">
-                  <img src="https://placehold.co/900x600/black/white?text=Pic-3" width="600" height="400" alt="Placehold" class="img-fluid tab-pane" id="item-3-tab-pane" role="tabpanel" aria-labelledby="item-3-tab" tabindex="0">
+                  <div class="tab-pane fade show active" id="item-1-tab-pane" role="tabpanel" aria-labelledby="item-1-tab" tabindex="0">
+                    <img src="https://placehold.co/900x600/blue/white?text=Pic-1" width="600" height="400" alt="Placehold" class="img-fluid">
+                  </div>
+                  <div class="tab-pane fade" id="item-2-tab-pane" role="tabpanel" aria-labelledby="item-2-tab" tabindex="0">
+                    <img src="https://placehold.co/900x600/yellow/black?text=Pic-2" width="600" height="400" alt="Placehold" class="img-fluid">
+                  </div>
+                  <div class="tab-pane fade" id="item-3-tab-pane" role="tabpanel" aria-labelledby="item-3-tab" tabindex="0">
+                    <img src="https://placehold.co/900x600/black/white?text=Pic-3" width="600" height="400" alt="Placehold" class="img-fluid">
+                  </div>
                 </div>
               </div>
             </div>
@@ -75,7 +90,7 @@ BBB
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" width="100" height="100" style="shape-rendering: auto; display: block; width: 75px; height: 75px;"
                 class="spinner-border border-0 mt-2">
                   <g data-idx="1">
-                    <circle stroke-dasharray="164.93361431346415 56.97787143782138" r="35" stroke-width="5" stroke="#000000" fill="none" cy="50" cx="50" data-idx="2" transform="matrix(-0.6374240718287216,0.7705131748732741,-0.7705131748732741,-0.6374240718287216,120.39686233509978,43.34554484777237)"></circle>
+                    <circle stroke-dasharray="164.93361431346415 56.97787143782138" r="35" stroke-width="5" stroke="#6f42c1" fill="none" cy="50" cx="50" data-idx="2" transform="matrix(-0.6374240718287216,0.7705131748732741,-0.7705131748732741,-0.6374240718287216,120.39686233509978,43.34554484777237)"></circle>
                     <g data-idx="4"></g>
                   </g>
                 </svg>
@@ -101,17 +116,16 @@ BBB
             </div>
 
             <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
-          </div>
         </div>
 
         <!-- CARD FOOTER -->
-        <div class="card-footer text-white p-3">
-          2 days ago
+        <div class="card-footer bg-transparent mt-3 border-0">
+          <i class="bi-clock-history me-1"></i>
+          <small class="text-body-secondary">2 days ago</small>
         </div>
-
       </div>
-    </div>
-
-    <script type="module" src="/js/main.js"></script>
+  </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

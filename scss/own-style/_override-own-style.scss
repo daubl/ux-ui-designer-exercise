@@ -1,0 +1,42 @@
+// Overrides
+//-------------
+.nav-pills .nav-link {
+  &:hover,
+  &:focus {
+    background-color: $nav-pills-link-hover-bg;
+    color: $main-grey;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $main-grey-lighted;
+  }
+}
+
+.card-own-style {
+  @each $titleType, $attr-and-value in $card-titles {
+      @each $attr, $value in $attr-and-value {
+        .card-#{$titleType} {
+          #{$attr}: $value;
+        }
+      }
+  }
+
+  .list-group-item {
+    padding: $spacer * 0.5;
+
+    &.active {
+      background-color: $list-group-own-active-bg;
+      color: $list-group-own-active-color;
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: tint-color($list-group-own-active-bg, 75%);
+    }
+  }
+
+  .list-group-icon {
+    color: $main-grey-lighted;
+  }
+}
