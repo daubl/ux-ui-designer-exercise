@@ -1,17 +1,17 @@
 // Custom own style
 // ----------------
 
-$primary: #6f42c1;
+$main-color: #6f42c1;
 
 // Own variables
-$primary-lighted: tint-color($primary, 75%);
+$main-color-lighted: tint-color($main-color, 75%);
 $main-grey: #555555;
 $main-grey-lighted: #adb5bd;
 
 $card-titles: (
   title: (
     font-size: 1.4rem,
-    color: $primary
+    color: $main-color
   ),
   subtitle: (
     font-size: 0.8rem,
@@ -19,14 +19,14 @@ $card-titles: (
   )
 );
 
-$list-group-own-active-color: $primary;
-$list-group-own-active-bg: tint-color($primary-lighted, 25%);
+$list-group-own-active-color: $main-color;
+$list-group-own-active-bg: tint-color($main-color-lighted, 25%);
 
 
 // Bootstrap variables 
 $font-family-sans-serif: "Lato", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-$nav-pills-link-active-bg: $primary;
-$nav-pills-link-hover-bg: $primary-lighted;
+$nav-pills-link-active-bg: $main-color;
+$nav-pills-link-hover-bg: $main-color-lighted;
 
 

@@ -1,8 +1,7 @@
 // Overrides
 //-------------
 .nav-pills .nav-link {
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $nav-pills-link-hover-bg;
     color: $main-grey;
   }

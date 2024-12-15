@@ -1,9 +1,9 @@
 // Functions
 @import "bootstrap/scss/functions";
 
-// Custom
-@import "custom";
-@import "./own-style/custom-own-style";
+// Custom & own style
+@import "./variant-A/custom";
+@import "./variant-B/custom-own-style";
 
 // Required Bootstrap imports
 @import "bootstrap/scss/variables";
@@ -26,6 +26,7 @@
 @import "bootstrap/scss/card";
 @import "bootstrap/scss/list-group";
 @import "bootstrap/scss/spinners";
+@import "bootstrap/scss/dropdown";
 
 // Helpers
 @import "bootstrap/scss/helpers";
@@ -34,5 +35,8 @@
 @import "bootstrap/scss/utilities/api";
 
 // Override
-@import "override.scss";
-@import "./own-style/override-own-style";
+@import "./variant-A/override";
+@import "./variant-B/override-own-style";
+
+// I import this file here instead of in the custom section because i want to have access to Bootstrap color variables
+@import "./variant-C/contextual-style";

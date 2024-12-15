@@ -1,0 +1,29 @@
+// Create a map in order to generate necessary class more easily
+$theme-name-with-value: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    info: $info,
+    warning: $warning,
+    danger: $danger,
+    light: $light,
+    dark: $dark
+);
+
+// The mixin to change the background color of the header & footer
+@mixin contextualizeCard($color) {
+
+    --card-header-and-footer-bg-color: #{$color};
+
+    .card-header,
+    .card-footer {
+        background-color: var(--card-header-and-footer-bg-color);
+    }
+}
+
+// Generation of the needed classes
+@each $themeName, $themeValue in $theme-name-with-value {
+    .card-#{$themeName} {
+        @include contextualizeCard($themeValue);
+    }
+}
