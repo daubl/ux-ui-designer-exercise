@@ -1,9 +1,8 @@
 // Custom own style
 // ----------------
 
-$main-color: #6f42c1;
-
 // Own variables
+$main-color: #6f42c1;
 $main-color-lighted: tint-color($main-color, 75%);
 $main-grey: #555555;
 $main-grey-lighted: #adb5bd;
@@ -14,7 +13,7 @@ $card-titles: (
     color: $main-color
   ),
   subtitle: (
-    font-size: 0.8rem,
+    font-size: 0.95rem,
     color: $main-grey-lighted
   )
 );
